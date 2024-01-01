@@ -67,7 +67,7 @@ def main():
         #     st.table(pred_data.head())
 
         pred_data["forecast"] = model.predict(pred_data_)
-        st.metric(f"Quantity to order for the next {duration} weeks", int(pred_data["forecast"].sum())
+        st.metric(f"Quantity to order for the next {duration} weeks", int(pred_data["forecast"].sum()))
         if st.toggle("Show forecast for those weeks"):
 
             #  st.line_chart(data[product], color="#fd0")
